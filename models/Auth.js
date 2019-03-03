@@ -11,8 +11,12 @@ Authentification.prototype.login = function() {
         username: this.username,
         password: this.password,
       }
-    });
-  };
+    }).then((response) => {
+      localStorage.setItem('accessToken', response.accessToken);
+      return this;
+  });
+};
+
 
 Authentification.prototype.register = function() {
     return $.ajax({
@@ -22,13 +26,21 @@ Authentification.prototype.register = function() {
         username: this.username,
         password: this.password,
       }
-    });
-  };
+    }).then((response) => {
+      localStorage.setItem('accessToken', response.accessToken);
+      return this;
+  });
+};
 
 Authentification.prototype.logout = function() {
     return $.ajax({
       url: "https://ancient-caverns-16784.herokuapp.com//auth/logout",
       headers: { 'x-auth-token:': localStorage.getItem('accessToken')},
       method: "GET",
-    });
-  };
+    }).then((response) => {
+      localStorage.removeItem('accessToken');
+      return this;
+  });
+};
+
+  
