@@ -36,6 +36,10 @@ function displayMovies(movies) {
           <h4>Type: ${type}</h4>
           <button class="details">Details</button>`
         );
+        $("#movieList").on("click", ".details", function() {
+          var id = $(this).parent().attr("id");
+          window.open("movieDetails.html?id="+id, "_blank");
+        })
       }
     };
 
