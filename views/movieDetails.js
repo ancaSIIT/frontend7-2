@@ -37,11 +37,18 @@ function onHtmlLoaded() {
 
 /*function editMovie() {
     window.open("editMovie.html?id="+id, "_self");
-}
-
-function deleteMovie() {
-
 }*/
+
+function deleteMovie() { 
+    var id = this.parentNode.getAttribute("id");
+    var movie = new Movie({ _id: id });
+    if (confirm("Are you sure you want to delete ?")) {
+        movie.deleteMovie().then(function () {
+            alert("The entry has been deleted");
+        });
+    }; 
+            
+};
 
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
