@@ -1,0 +1,20 @@
+#bannerZone, #bannerImg {
+    max-height: 300px;
+    width: 100%;
+    width: 100%;
+}
+
+.emptyDiv {
+    height: 50px;
+}
+
+#paginationButtons {
+    margin: auto;
+    width: 20%;
+}
+
+#movieList {
+    margin: auto;
+    width: 60%;
+}
+
