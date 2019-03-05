@@ -21,8 +21,8 @@ function onHtmlLoaded() {
         "</label>"+movie.Type+"</p><p id='dvd' class='datails'><label>DVD: </label>"+movie.DVD+"</p><p id='boxoffice' class='datails'>"+
         "<label>BoxOffice: </label>"+movie.BoxOffice+"</p><p id='production' class='datails'><label>Production: "+
         "</label>"+movie.Production+"</p><p id='website' class='datails'><label>Website: </label>"+movie.Website+"</p>"+
-        "<p id='response' class='datails'><label>Response: </label>"+movie.Response+"</p><div class='btns' id="+movie._id+"><button id='editMovie'>"+
-        "Edit movie</button><button id='deleteMovie'>Delete movie</button></div>";
+        "<p id='response' class='datails'><label>Response: </label>"+movie.Response+"</p><div class='btns' id="+movie._id+"><button id='editMovie' class='btn btn-info'>"+
+        "Edit movie</button> <button id='deleteMovie' class='btn btn-info'>Delete movie</button></div><div id='emptyDiv'></div>";
         console.log(movie);
 
         var list=document.getElementById('ratings');

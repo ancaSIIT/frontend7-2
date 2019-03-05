@@ -92,7 +92,7 @@ body {
     margin-left: 20px;
   }
   button {
-    width: 100px;
+    
     height: 35px;
     margin-left: 40px;
     margin-right: 20px;
@@ -133,4 +133,8 @@ body {
       float: none;
       text-align: center;
     }
+  }
+
+  #emptyDiv {
+    height: 30px;
   }
