@@ -62,3 +62,43 @@ $("#prevPage").on("click", function() {
   });
 });
 
+$(document).ready(function () {
+  $("#login").click(function () {
+    event.preventDefault();
+    var username = $("#usernameInput").val();
+    var password = $("#passwordInput").val();
+    // Checking for blank fields.
+    if (username == '' || password == '') {
+      $('input[type="text"],input[type="password"]').css("border", "2px solid red");
+      $('input[type="text"],input[type="password"]').css("box-shadow", "0 0 3px red");
+      alert("Please fill all fields!");
+    } else {
+      var authModel = new Authentication({username: username, password: password});
+      authModel.login()
+    }
+  });
+});
+
+$(document).ready(function () {
+  $("#register").click(function (event) {
+    event.preventDefault();
+    var username = $("#usernameInput").val();
+    var password = $("#passwordInput").val();
+    if (username == '' || password == '') {
+      alert("Please fill all fields!");
+    } else if ((password.length) < 8) {
+      alert("Password should atleast 8 character in length!");
+    } else {
+      var authModel = new Authentication({username: username, password: password});
+      authModel.register()
+    }
+  });
+});
+
+$(document).ready(function () {
+  $("#logout").click(function () {
+    event.preventDefault();
+    var authModel = new Authentication();
+    authModel.logout()
+  });
+});
