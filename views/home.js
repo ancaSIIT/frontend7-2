@@ -62,6 +62,7 @@ $("#prevPage").on("click", function() {
   });
 });
 
+// LOGIN FUNCTION
 $(document).ready(function () {
   $("#login").click(function () {
     event.preventDefault();
@@ -79,6 +80,7 @@ $(document).ready(function () {
   });
 });
 
+// REGISTER FUNCTION
 $(document).ready(function () {
   $("#register").click(function (event) {
     event.preventDefault();
@@ -95,6 +97,7 @@ $(document).ready(function () {
   });
 });
 
+// LOGOUT FUNCTION
 $(document).ready(function () {
   $("#logout").click(function () {
     event.preventDefault();
@@ -102,3 +105,16 @@ $(document).ready(function () {
     authModel.logout()
   });
 });
+
+// DISABLE AUTH BUTTONS
+function disable_enable(_this) {
+  if (_this == 'login') {
+    document.getElementById("login").hidden = true;
+    document.getElementById("logout").hidden = false;
+    document.getElementById("register").hidden = true;
+  } else {
+    document.getElementById("login").hidden = false;
+    document.getElementById("logout").hidden = true;
+    document.getElementById("register").hidden = false;
+  }
+}
