@@ -24,7 +24,7 @@ function displayMovies(movies) {
         $("#movieList").append(
           `<article id="${id}" class="movie">
           <h2>${title}</h2>
-          <img src="${poster}" />
+          <img src="${poster}" id="image" />
           <h4>Year: ${year}</h4>
           <h4>Runtime: ${runtime}</h4>
           <h4>Genre: ${genre}</h4>
@@ -34,9 +34,10 @@ function displayMovies(movies) {
           <h4>imdbVotes: ${imdbVotes}</h4>
           <h4>imdbID: ${imdbID}</h4>
           <h4>Type: ${type}</h4>
-          <button class="details">Details</button>`
+          <button id="details" class="btn btn-outline-info">Details</button>
+          <hr/>`
         );
-        $("#movieList").on("click", ".details", function() {
+        $("#movieList").on("click", "#details", function() {
           var id = $(this).parent().attr("id");
           window.open("movieDetails.html?id="+id, "_blank");
         })

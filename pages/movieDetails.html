@@ -7,149 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
         
-       
+    <link rel="stylesheet" href="../styles/movieDetails.css">   
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-    <style>
-      body {
-        background-image: linear-gradient(
-          to right,
-          #081C48,
-          #52A2D2,
-          #CACDCC,
-          #52A2D2,
-          #081C48
-        );
-        background-repeat: repeat;
-        background-size: cover;
-      }
-      #movieDetails {
-        width: 70%;
-        border: 1px solid #081C48;
-        box-shadow: 5px 5px 7px #154D78;
-        border-radius: 10px;
-        margin: 20px auto;
-        overflow: auto;
-        background-color: #CACDCC;
-      }
-      #image {
-        float: right;
-        padding: 0 15px 0 15px;
-      }
-      img #poster {
-        max-width: 100%;
-        height: auto;
-      }
-      p,li {
-        color:royalblue;
-        margin-left: 20px;
-        margin-right: 20px;
-        text-align: justify;
-      }
-      #title, p#year {
-        float: left;
-        margin-bottom: 0;
-        padding-left: 10px;
-        color: royalblue;
-      }
-      .info {
-        background-color:  #081C48;
-        margin-bottom: 10px;
-      }
-      p#year {
-        color: silver;
-        font-size: 1.3em;
-        margin-left: 0;
-        margin-top: 5px;
-      }
-      .line {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start; 
-        padding-left: 10px;  
-      }
-      p#released, p#genre, p#runtime {
-        padding: 0 10px 0 0;
-        font-size: 0,6em;
-        color: silver;
-        margin: 0;
-      }
-      p#released {
-        padding-left: 10px;
-      }
-      p#genre {
-        border-right: 2px solid  #737373;
-        border-left: 2px solid  #737373;
-        padding-left: 10px;
-      }
-      p#imdbRating {
-        margin: 20px 5px 0 5px;
-        float: right;
-        font-size: 0,5em;
-        color:  silver;
-      }
-      p#imdbVotes {
-        margin: 18px 5px 0 5px;
-        padding: 0 0 0 10px;
-        float: right;
-        border-left: 2px solid  #737373;
-        text-align: center;
-        font-size: 0,3em;
-        color:  silver;
-      }
-      label {
-        font-weight: bolder;
-        color: #4d4d4d;
-      }
-      #ratingLabel {
-        margin-left: 20px;
-      }
-      button {
-        width: 100px;
-        height: 35px;
-        margin-left: 40px;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: 1px solid #081C48;
-        background-color: #081C48;
-        color: #d2cbc6;
-      }
-      button:hover {
-        box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
-        border: 1px solid #154D78;
-      }
-      .btns {
-        text-align: center;
-      }
-      
-      @media (max-width: 1024px) {
-        p#imdbVotes  {
-          clear: left;
-          float: left;
-          border-left: none;
-          border-right: 2px solid  #737373;
-          margin-left: 10px;
-          margin-bottom: 20px;
-          padding-left: 0;
-        } 
-        p#imdbRating {
-          float:left;  
-          margin-bottom: 20px;   
-          }
-      }
-      @media (max-width: 768px) {
-        #movieDetails {
-          width: 100%;
-        }
-        #image {
-          float: none;
-          text-align: center;
-        }
-      }
-    </style>
   </head>
   <body>
 
@@ -184,7 +45,7 @@
 
     
     <!-- -------------LOGIN DROPDOWN ZONE----------------     -->
-        <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+        <!-- <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li> -->
         <li class="dropdown order-1">
             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">Login <span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-right mt-2">
@@ -209,6 +70,8 @@
 </nav>
 <!-- -------------END OF LOGIN DROPDOWN ZONE----------------     -->
 <!-- -------------END OF NAVBAR ZONE----------------     -->
+<div class="emptyDiv"></div>
+<div class="emptyDiv"></div>
 <article id="movieDetails"></article>
 
     
