@@ -93,9 +93,9 @@ function displayMovies(movies) {
           <h6>imdbVotes: ${imdbVotes}</h6>
           <h6>imdbID: ${imdbID}</h6>
           <h6>Type: ${type}</h6><br />
-          <button class="details">Details</button>`
+          <button id="details" class="btn btn-outline-info">Details</button>`
         );
-        $("#movieList").on("click", ".details", function() {
+        $("#movieList").on("click", "#details", function() {
           var id = $(this).parent().attr("id");
           window.open("movieDetails.html?id="+id, "_blank");
         })
@@ -120,3 +120,59 @@ $("#prevPage").on("click", function() {
   });
 });
 
+// LOGIN FUNCTION
+$(document).ready(function () {
+  $("#login").click(function () {
+    event.preventDefault();
+    var username = $("#usernameInput").val();
+    var password = $("#passwordInput").val();
+    // Checking for blank fields.
+    if (username == '' || password == '') {
+      $('input[type="text"],input[type="password"]').css("border", "2px solid red");
+      $('input[type="text"],input[type="password"]').css("box-shadow", "0 0 3px red");
+      alert("Please fill all fields!");
+    } else {
+      var authModel = new Authentication({username: username, password: password});
+      authModel.login()
+    }
+  });
+});
+
+// REGISTER FUNCTION
+$(document).ready(function () {
+  $("#register").click(function (event) {
+    event.preventDefault();
+    var username = $("#usernameInput").val();
+    var password = $("#passwordInput").val();
+    if (username == '' || password == '') {
+      alert("Please fill all fields!");
+    } else if ((password.length) < 8) {
+      alert("Password should atleast 8 character in length!");
+    } else {
+      var authModel = new Authentication({username: username, password: password});
+      authModel.register()
+    }
+  });
+});
+
+// LOGOUT FUNCTION
+$(document).ready(function () {
+  $("#logout").click(function () {
+    event.preventDefault();
+    var authModel = new Authentication();
+    authModel.logout()
+  });
+});
+
+// DISABLE AUTH BUTTONS
+function disable_enable(_this) {
+  if (_this == 'login') {
+    document.getElementById("login").hidden = true;
+    document.getElementById("logout").hidden = false;
+    document.getElementById("register").hidden = true;
+  } else {
+    document.getElementById("login").hidden = false;
+    document.getElementById("logout").hidden = true;
+    document.getElementById("register").hidden = false;
+  }
+}
