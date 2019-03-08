@@ -38,7 +38,7 @@
         float: right;
         padding: 0 15px 0 15px;
       }
-      img #poster {
+      #image #poster {
         max-width: 100%;
         height: auto;
       }
@@ -51,6 +51,7 @@
       #title, p#year {
         float: left;
         margin-bottom: 0;
+        margin-top: 10px;
         padding-left: 10px;
         color: royalblue;
       }
@@ -62,7 +63,7 @@
         color: silver;
         font-size: 1.3em;
         margin-left: 0;
-        margin-top: 5px;
+        margin-top: 15px;
       }
       .line {
         display: flex;
@@ -85,16 +86,17 @@
         padding-left: 10px;
       }
       p#imdbRating {
-        margin: 20px 5px 0 5px;
+        margin: 25px 5px 0 5px;
+        border-right: 2px solid  #737373;
+        padding: 0 10px 0 10px;
         float: right;
         font-size: 0,5em;
         color:  silver;
       }
       p#imdbVotes {
         margin: 18px 5px 0 5px;
-        padding: 0 0 0 10px;
+        
         float: right;
-        border-left: 2px solid  #737373;
         text-align: center;
         font-size: 0,3em;
         color:  silver;
@@ -106,7 +108,7 @@
       #ratingLabel {
         margin-left: 20px;
       }
-      button {
+      #editMovie, #deleteMovie {
         width: 100px;
         height: 35px;
         margin-left: 40px;
@@ -117,7 +119,7 @@
         background-color: #081C48;
         color: #d2cbc6;
       }
-      button:hover {
+      #editMovie:hover, #deleteMovie:hover {
         box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
         border: 1px solid #154D78;
       }
@@ -125,7 +127,7 @@
         text-align: center;
       }
       
-      @media (max-width: 1024px) {
+      @media (max-width: 1240px) {
         p#imdbVotes  {
           clear: left;
           float: left;
@@ -138,7 +140,7 @@
         p#imdbRating {
           float:left;  
           margin-bottom: 20px;   
-          }
+        }
       }
       @media (max-width: 768px) {
         #movieDetails {

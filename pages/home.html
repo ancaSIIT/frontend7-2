@@ -36,18 +36,18 @@
               <a class="nav-link" href="./addMovie.html">Add Movie</a>
             </li>
             <li class="nav-item active" style="width: 6em">
-              <a class="nav-link" href="#">buton2</a>
+              <a class="nav-link" id ="advanceLink" href="#">Search</a>
             </li>
           </ul>
     <!-- -------------END OF BUTTONS ZONE----------------     -->
 
     <!-- -------------SEARCHBAR ZONE----------------     -->
         <div class="input-group mb-2 mt-2">
-            <input type="text" class="form-control" placeholder="Search ... " aria-label="Recipient's username" aria-describedby="searchButton">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search ... " aria-label="Recipient's username" aria-describedby="searchButton">
             <div class="input-group-append">
                 <button class="btn btn-outline-primary" type="button" id="searchButton">Search</button>
             </div>
-        </div>
+        </div>    
     <!-- -------------END OF SEARCHBAR ZONE----------------     -->
     
     <!-- -------------LOGIN DROPDOWN ZONE----------------     -->
@@ -77,8 +77,16 @@
 <!-- -------------END OF LOGIN DROPDOWN ZONE----------------     -->
 <!-- -------------END OF NAVBAR ZONE----------------     -->
 <div class="emptyDiv"></div>
-<div class="emptyDiv"></div>
 
+<div id="inputContainer">
+    <div class="text"><label>Title: </label><input type="text" placeholder="Title" name="Title" class="searchInput"/></div>
+    <div class="text"><label>Year: </label><input type="text" placeholder="Year" name="Year" class="searchInput"/></div>
+    <div class="text"><label>Genre: </label><input type="text" placeholder="Genre" name="Genre" class="searchInput"/></div>
+    <div class="text"><label>Language: </label><input type="text" placeholder="Language" name="Language" class="searchInput"/></div>
+    <div class="text"><label>imdbRating: </label><input type="text" placeholder="imdbRating" name="imdbRating" class="searchInput"/></div>
+    <div class="text"><label>Type: </label><input type="text" placeholder="Type" name="Type" class="searchInput"/></div>
+    <div id="parentButton"><button id="submitSearch">Search</button></div>
+</div>
 
 <section id="movieList"></section>
 <div class="emptyDiv"></div>

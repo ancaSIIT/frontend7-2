@@ -5,9 +5,68 @@ function onHtmlLoaded() {
   movieList.getMovies().then(function(response) {
     displayMovies(response.results);
   });
+  
+  $("#searchButton").on("click", function() {
+      var searchBy=$("#searchInput").val();
+      $("#movieList").empty();
+      $("#searchInput").val("");
+      console.log(searchBy);
+      var movieList = new MovieList({url:"https://ancient-caverns-16784.herokuapp.com/movies?Title=" + searchBy});
+      movieList.getMovies().then(function(response) {
+        console.log(response);
+        displayMovies(response.results);
+      }).catch(function(error) {
+        alert(error);
+      })
+  });
+
+  var c=document.getElementById("inputContainer");
+  var d=document.getElementById("advanceLink");
+    d.addEventListener("click", function() {
+        if (c.style.display === "block") {
+            c.style.display = "none";
+          } else {
+            c.style.display = "block";
+          }
+    });
+
+    document.getElementById("submitSearch").addEventListener("click", function () {
+        document.getElementById("movieList").innerHTML="";
+        var search1=document.querySelector("input[name='Title']").value;
+        var search2=document.querySelector("input[name='Year']").value;
+        var search3=document.querySelector("input[name='Genre']").value;
+        var search4=document.querySelector("input[name='Language']").value; 
+        var search5=document.querySelector("input[name='imdbRating']").value;
+        var search6=document.querySelector("input[name='Type']").value;
+        var query={"Title":search1, "Year": search2, "Genre": search3, "Language": search4, "imdbRating": search5, "Type": search6};
+        console.log(query);
+        var text="";
+        var x;
+        for (x in query) {
+            if (query[x]!="") {
+                text+=x+"="+query[x]+"&";
+            }
+        }
+        document.querySelector("input[name='Title']").value="";
+        document.querySelector("input[name='Year']").value="";
+        document.querySelector("input[name='Genre']").value="";
+        document.querySelector("input[name='Language']").value=""; 
+        document.querySelector("input[name='imdbRating']").value="";
+        document.querySelector("input[name='Type']").value="";
+      console.log(text);
+      var movieList = new MovieList({url:"https://ancient-caverns-16784.herokuapp.com/movies?"+text});
+      movieList.getMovies().then(function(response) {
+        displayMovies(response.results);
+      }).catch(function(error) {
+        alert(error);
+      })
+  })
 };
 
 function displayMovies(movies) {
+  if (movies.length==0) {
+    $("#movieList").append(`<p style="color:white; margin-left:20px; font-size:1em">Your search did not match any movie. Please try another keyword</p>`);
+  }
     for (var i = 0; i < movies.length; i++) {
         var id = movies[i]._id;
         var title = movies[i].Title;
@@ -25,15 +84,15 @@ function displayMovies(movies) {
           `<article id="${id}" class="movie">
           <h2>${title}</h2>
           <img src="${poster}" />
-          <h4>Year: ${year}</h4>
-          <h4>Runtime: ${runtime}</h4>
-          <h4>Genre: ${genre}</h4>
-          <h4>Language: ${language}</h4>
-          <h4>Country: ${country}</h4>
-          <h4>imdbRating: ${imdbRating}</h4>
-          <h4>imdbVotes: ${imdbVotes}</h4>
-          <h4>imdbID: ${imdbID}</h4>
-          <h4>Type: ${type}</h4>
+          <h6>Year: ${year}</h6>
+          <h6>Runtime: ${runtime}</h6>
+          <h6>Genre: ${genre}</h6>
+          <h6>Language: ${language}</h6>
+          <h6>Country: ${country}</h6>
+          <h6>imdbRating: ${imdbRating}</h6>
+          <h6>imdbVotes: ${imdbVotes}</h6>
+          <h6>imdbID: ${imdbID}</h6>
+          <h6>Type: ${type}</h6><br />
           <button class="details">Details</button>`
         );
         $("#movieList").on("click", ".details", function() {

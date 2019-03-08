@@ -17,4 +17,125 @@
     margin: auto;
     width: 60%;
 }
+body {
+  background-image: linear-gradient(
+    to right,
+    #081C48,
+    #52A2D2,
+    #CACDCC,
+    #52A2D2,
+    #081C48
+  );
+  background-repeat: repeat;
+  background-size: cover;
+}
+#advanceLink {
+    display: block;
+}
+#inputContainer {
+    display: none;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    margin: 0 auto 20px auto;
+  }
+  .text {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  #inputContainer label {
+    margin: 0;
+    padding: 0;
+    display: block;
+    padding-top: 0.4em;
+    padding-right: 0.25em;
+    width: 10em;
+    text-align: right;
+    float: left;
+    color:black;
+  }
+
+  .searchInput  {
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: #bdcbf5;
+    background-color: #bdcbf5;
+    margin: 5px 10px;
+    width: 50%;
+  }
+  button#submitSearch {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid royalblue;
+    background-color: #4169e1;
+    color: #d2cbc6;
+    margin-top: 10px;
+  }
+  button#submitSearch:hover {
+    box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
+  }
+  #parentButton {
+    text-align: center;
+  }
+  section#movieList {
+    width: 100%;
+  }
+  #movieList article {
+    width: 60%;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #081C48;
+    box-shadow: 5px 5px 7px #154D78;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    background-color: #081C48;
+    overflow: auto;
+  }
+  #movieList img {
+    max-width: 30%;
+    height: auto;
+    float: left;
+    margin: 5px 25px 10px 0;
+  }
+  .details {
+    float: right;
+    margin: 0 30px 10px 10px;;
+  }
+  @media (max-width: 768px) {
+    #inputContainer {
+      margin-left: auto;
+      width: 80%;
+    }
+    .searchInput  {
+      width: 60%;
+    }
+    label {
+      width: 6em;
+    }
+    #movieList img {
+      max-width: 50%;
+      margin: 10px auto;
+      height: auto;
+      float: none;
+    }
+    #movieList article {
+      width: 70%;
+      height: auto;
+      text-align: center;
+    }
+    .details {
+      float: none;
+    }
+    h6 {
+      text-align: justify;
+      margin-left: 20px;
+    }
+  }
 
