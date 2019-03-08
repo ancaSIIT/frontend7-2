@@ -35,7 +35,7 @@ Authentication.prototype.register = function() {
 Authentication.prototype.logout = function() {
   return $.ajax({
     url: "https://ancient-caverns-16784.herokuapp.com/auth/logout",
-    headers: { 'x-auth-token:'localStorage.getItem('accessToken')},
+    headers: { 'x-auth-token:':localStorage.getItem('accessToken')},
     method: "GET",
   }).then((response) => {
     localStorage.removeItem('accessToken');
