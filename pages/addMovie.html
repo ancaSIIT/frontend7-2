@@ -8,7 +8,7 @@
         
         
         
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/movieList.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
@@ -16,13 +16,13 @@
     <!-- -------------BANNER ZONE---------------- -->
     <div id="bannerZone">
         <img src="https://png.pngtree.com/thumb_back/fw800/back_pic/04/25/94/8858392d9845b33.jpg" id="bannerImg">
-    </div>
+        <h1 id="teamTitle">MINUS1&nbsp;<span>MOVIES</span></h1>
+      </div>
     <!-- -------------END OF BANNER ZONE---------------- -->
 
     <!-- -------------NAVBAR ZONE---------------- -->
     <!-- -------------BUTTONS ZONE----------------     -->
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark col-lg-12">
-        <a class="navbar-brand" href="./home.html">MINUS1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,18 +32,13 @@
             <li class="nav-item active" >
               <a class="nav-link" href="./home.html">Home</a>
             </li>
-            <li class="nav-item active" style="width: 6em">
-              <a class="nav-link" href="#">Add Movie</a>
-            </li>
-            <li class="nav-item active" style="width: 6em">
-              <a class="nav-link" href="#">buton2</a>
-            </li>
           </ul>
     <!-- -------------END OF BUTTONS ZONE----------------     -->
 
 
     
     <!-- -------------LOGIN DROPDOWN ZONE----------------     -->
+    <ul id="auth">
         <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
         <li class="dropdown order-1">
             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">Login <span class="caret"></span></button>
@@ -65,36 +60,34 @@
                 </li>
             </ul>
         </li>
-    </div>
+    </ul>  
+  </div>
 </nav>
 <!-- -------------END OF LOGIN DROPDOWN ZONE----------------     -->
 <!-- -------------END OF NAVBAR ZONE----------------     -->
 
-
-
-<div class="emptyDiv"></div>
 <section id="inputData">
-  <div class="title"><label>Title: </label><input id="title" type="text" placeholder="Title"></div><br />
-  <div class="year"><label>Year: </label><input id="year" type="text" placeholder="Year"></div><br />
-  <div class="imdbvotes"><label>IMDb votes: </label><input id="imdbVotes" type="text" placeholder="imdbVotes"></div><br />
-  <div class="imdbratings"><label>IMDb Rating: </label><input id="imdbRating" type="number" placeholder="imdbRating"></div><br />
-  <div class="runtime"><label>Runtime: </label><input id="runtime" type="text" placeholder="Runtime"></div><br />
-  <div class="genre"><label>Genre: </label><input id="genre" type="text" placeholder="Genre"></div><br />
-  <div class="released"><label>Released: </label><input id="released" type="text" placeholder="Released"></div><br />
-  <div class="posterURL"><label>PosterURL: </label><input id="posterURL" type="text" placeholder="Poster"></div><br />
-  <div class="rated"><label>Rated: </label><input id="rated" type="text" placeholder="Rated"></div><br />
-  <div class="director"><label>Director: </label><input id="director" type="text" placeholder="Director"></div><br />
-  <div class="writer"><label>Writer: </label><input id="writer" type="text" placeholder="Writer"></div><br />
-  <div class="actors"><label>Actors: </label><input id="actors" type="text" placeholder="Actors"></div><br />
-  <div class="plot"><label>Plot: </label><textarea id="plot" placeholder="Plot"></textarea></div><br />
-  <div class="language"><label>Language: </label><input id="language" type="text" placeholder="Language"></div><br />
-  <div class="country"><label>Country: </label><input id="country" type="text" placeholder="Country"></div><br />
-  <div class="movies"><label>Movies: </label><input id="awards" type="text" placeholder="Awards"></div><br />
-  <div class="ratings"><label>Ratings: </label><input id="ratings" type="text" placeholder="Ratings"></div><br />
-  <div class="metascore"><label>Metascore: </label><input id="metascore" type="text" placeholder="Metascore"></div><br />
-  <div class="imdbID"><label>IMDb ID: </label><input id="imdbID" type="text" placeholder="imdbID"></div><br />
-  <div class="type"><label>Type: </label><input id="type" type="text" placeholder="Type"></div><br />
-  <div class="btns"><button id='save'>Save</button><button id='close'>Close</button></div>
+  <div class="textDiv"><label>Title: </label><input id="title" type="text" placeholder="Title"></div><br />
+  <div class="textDiv"><label>Year: </label><input id="year" type="text" placeholder="Year"></div><br />
+  <div class="textDiv"><label>IMDb votes: </label><input id="imdbVotes" type="text" placeholder="imdbVotes"></div><br />
+  <div class="textDiv"><label>IMDb Rating: </label><input id="imdbRating" type="number" placeholder="imdbRating"></div><br />
+  <div class="textDiv"><label>Runtime: </label><input id="runtime" type="text" placeholder="Runtime"></div><br />
+  <div class="textDiv"><label>Genre: </label><input id="genre" type="text" placeholder="Genre"></div><br />
+  <div class="textDiv"><label>Released: </label><input id="released" type="text" placeholder="Released"></div><br />
+  <div class="textDiv"><label>PosterURL: </label><input id="posterURL" type="text" placeholder="Poster"></div><br />
+  <div class="textDiv"><label>Rated: </label><input id="rated" type="text" placeholder="Rated"></div><br />
+  <div class="textDiv"><label>Director: </label><input id="director" type="text" placeholder="Director"></div><br />
+  <div class="textDiv"><label>Writer: </label><input id="writer" type="text" placeholder="Writer"></div><br />
+  <div class="textDiv"><label>Actors: </label><input id="actors" type="text" placeholder="Actors"></div><br />
+  <div class="textDiv"><label>Plot: </label><textarea id="plot" placeholder="Plot"></textarea></div><br />
+  <div class="textDiv"><label>Language: </label><input id="language" type="text" placeholder="Language"></div><br />
+  <div class="textDiv"><label>Country: </label><input id="country" type="text" placeholder="Country"></div><br />
+  <div class="textDiv"><label>Movies: </label><input id="awards" type="text" placeholder="Awards"></div><br />
+  <div class="textDiv"><label>Ratings: </label><input id="ratings" type="text" placeholder="Ratings"></div><br />
+  <div class="textDiv"><label>Metascore: </label><input id="metascore" type="text" placeholder="Metascore"></div><br />
+  <div class="textDiv"><label>IMDb ID: </label><input id="imdbID" type="text" placeholder="imdbID"></div><br />
+  <div class="textDiv"><label>Type: </label><input id="type" type="text" placeholder="Type"></div><br />
+  <div class="btns"><button id='save' class='btn btn-primary'>Save</button><button id='close' class='btn btn-primary'>Close</button></div>
 </section>
 
 
@@ -104,7 +97,6 @@
       <script src="../models/Movie.js"></script>
       <script src="../models/Auth.js"></script>
       <script src="../models/MovieList.js"></script>
-      <script src="../views/home.js"></script>
       <script src="../views/movieDetails.js"></script>
   </body>
 </html>
