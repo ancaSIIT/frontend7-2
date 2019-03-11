@@ -53,10 +53,9 @@ function onHtmlLoaded() {
 
     movie.addMovie().then(
         function(response) {
-            alert("You have successfully added your entry!");
-           // movie._id = response._id;
-            //movie.getMovie().then(function(self) {
-            //displayMovie(self);
+            var id = response._id;
+            window.open("movieDetails.html?id="+id, "_blank");
+            alert("You have successfully added your entry!");         
             },      
         function(response) {
             alert("An error has occurred");
