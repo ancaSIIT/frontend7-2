@@ -18,7 +18,8 @@ function onHtmlLoaded() {
         "<p id='awards' class='datails'><label>Movie awards:&nbsp;</label>"+movie.Awards+"</p><label id='ratingLabel'>Ratings:&nbsp;</label>"+
         "<ul id='ratings' class='datails'></ul><p id='metascore' class='datails'><label>Metascore:&nbsp;</label>"+movie.Metascore+"</p>"+
         "<p id='imdbID' class='datails'><label>IMDb ID:&nbsp;</label>"+movie.imdbID+"</p><p id='type' class='datails'><label>Type:&nbsp;"+
-        "</label>"+movie.Type+"</p><div class='btns' id="+movie._id+"><button id='editMovie'>Edit</button><button id='deleteMovie'>Delete</button></div>";
+        "</label>"+movie.Type+"</p><div class='btns' id="+movie._id+"><button id='editMovie' class='btn btn-primary'>Edit</button>"+
+        "<button id='deleteMovie' class='btn btn-primary'>Delete</button></div>";
         console.log(movie);
 
         var list=document.getElementById('ratings');
@@ -36,11 +37,9 @@ function deleteMovie() {
     var id = this.parentNode.getAttribute("id");
     var movie = new Movie({ _id: id });
     if (confirm("Are you sure you want to delete ?")) {
-        movie.deleteMovie().then(function () {
         movie.deleteMovie().then(function() {
             alert("The entry has been deleted");
         });
-    }); 
     }       
 };
 

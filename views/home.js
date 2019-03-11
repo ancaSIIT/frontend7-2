@@ -25,8 +25,10 @@ function onHtmlLoaded() {
     d.addEventListener("click", function() {
         if (c.style.display === "block") {
             c.style.display = "none";
+           location.reload(true);
           } else {
             c.style.display = "block";
+            document.getElementById("movieList").innerHTML="";
           }
     });
 
@@ -83,7 +85,7 @@ function displayMovies(movies) {
         $("#movieList").append(
           `<article id="${id}" class="movie">
           <h2>${title}</h2>
-          <img src="${poster}" />
+          <img src="${poster}" alt="${title}"/>
           <h6>Year: ${year}</h6>
           <h6>Runtime: ${runtime}</h6>
           <h6>Genre: ${genre}</h6>
@@ -93,7 +95,7 @@ function displayMovies(movies) {
           <h6>imdbVotes: ${imdbVotes}</h6>
           <h6>imdbID: ${imdbID}</h6>
           <h6>Type: ${type}</h6><br />
-          <button id="details" class="btn btn-outline-info">Details</button>`
+          <button id="details" class="btn btn-primary">Details</button>`
         );
         $("#movieList").on("click", "#details", function() {
           var id = $(this).parent().attr("id");

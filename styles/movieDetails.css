@@ -1,3 +1,17 @@
+#auth {
+  list-style-type: none;
+}
+#teamTitle {
+  position: absolute;
+  top:20px;
+  right: 20px;
+  color: #CACDCC;
+  text-shadow: 5px 5px 7px #52A2D2;
+  }
+  #teamTitle span {
+  font-size: 0.5em;
+  color: #CACDCC;
+  }
 body {
   background-image: linear-gradient(
     to right,
@@ -28,7 +42,7 @@ body {
   height: auto;
 }
 p,li {
-  color:royalblue;
+  color:#154D78;
   margin-left: 20px;
   margin-right: 20px;
   text-align: justify;
@@ -38,7 +52,7 @@ p,li {
   margin-bottom: 0;
   margin-top: 10px;
   padding-left: 10px;
-  color: royalblue;
+  color: #52A2D2;
 }
 .info {
   background-color:  #081C48;
@@ -100,13 +114,7 @@ label {
   margin-right: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
-  border: 1px solid #081C48;
-  background-color: #081C48;
-  color: #d2cbc6;
-}
-#editMovie:hover, #deleteMovie:hover {
-  box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
-  border: 1px solid #154D78;
+  
 }
 .btns {
   text-align: center;

@@ -18,13 +18,13 @@
     <!-- -------------BANNER ZONE---------------- -->
     <div id="bannerZone">
         <img src="https://png.pngtree.com/thumb_back/fw800/back_pic/04/25/94/8858392d9845b33.jpg" id="bannerImg">
+        <h1 id="teamTitle">MINUS1&nbsp;<span>MOVIES</span></h1>
     </div>
     <!-- -------------END OF BANNER ZONE---------------- -->
 
     <!-- -------------NAVBAR ZONE---------------- -->
     <!-- -------------BUTTONS ZONE----------------     -->
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark col-lg-12">
-        <a class="navbar-brand" href="./home.html">MINUS1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,12 +34,6 @@
             <li class="nav-item active" >
               <a class="nav-link" href="./home.html">Home</a>
             </li>
-            <li class="nav-item active" style="width: 6em">
-              <a class="nav-link" href="#">Add Movie</a>
-            </li>
-            <li class="nav-item active" style="width: 6em">
-              <a class="nav-link" href="#">buton2</a>
-            </li>
           </ul>
     <!-- -------------END OF BUTTONS ZONE----------------     -->
 
@@ -47,8 +41,9 @@
     
     <!-- -------------LOGIN DROPDOWN ZONE----------------     -->
         <!-- <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li> -->
+      <ul id="auth">  
         <li class="dropdown order-1">
-            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-info dropdown-toggle">Login <span class="caret"></span></button>
+            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Login <span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-right mt-2">
                 <li class="px-3 py-2">
                     <form class="form" role="form">
@@ -67,6 +62,7 @@
                 </li>
             </ul>
         </li>
+      </ul>
     </div>
 </nav>
 <!-- -------------END OF LOGIN DROPDOWN ZONE----------------     -->
@@ -81,7 +77,6 @@
       <script src="../models/Movie.js"></script>
       <script src="../models/Auth.js"></script>
       <script src="../models/MovieList.js"></script>
-      <script src="../views/home.js"></script>
       <script src="../views/movieDetails.js"></script>
 
   </body>

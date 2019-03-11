@@ -18,13 +18,13 @@
     <!-- -------------BANNER ZONE---------------- -->
     <div id="bannerZone">
         <img src="https://png.pngtree.com/thumb_back/fw800/back_pic/04/25/94/8858392d9845b33.jpg" id="bannerImg">
+        <h1 id="teamTitle">MINUS1&nbsp;<span>MOVIES</span></h1>
     </div>
     <!-- -------------END OF BANNER ZONE---------------- -->
 
     <!-- -------------NAVBAR ZONE---------------- -->
     <!-- -------------BUTTONS ZONE----------------     -->
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark col-lg-12">
-        <a class="navbar-brand" href="./home.html">MINUS1</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,15 +47,16 @@
         <div class="input-group mb-2 mt-2">
             <input type="text" class="form-control" id="searchInput" placeholder="Search ... " aria-label="Recipient's username" aria-describedby="searchButton">
             <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" id="searchButton">Search</button>
+                <button class="btn btn-primary" type="button" id="searchButton">Search</button>
             </div>
         </div>    
     <!-- -------------END OF SEARCHBAR ZONE----------------     -->
     
     <!-- -------------LOGIN DROPDOWN ZONE----------------     -->
+    <ul id="auth">
         <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
         <li class="dropdown order-1">
-            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-primary dropdown-toggle">Login <span class="caret"></span></button>
+            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Login <span class="caret"></span></button>
             <ul class="dropdown-menu dropdown-menu-right mt-2">
                 <li class="px-3 py-2">
                     <form class="form" role="form">
@@ -74,6 +75,7 @@
                 </li>
             </ul>
         </li>
+    </ul>
     </div>
 </nav>
 <!-- -------------END OF LOGIN DROPDOWN ZONE----------------     -->
@@ -87,15 +89,15 @@
     <div class="text"><label>Language: </label><input type="text" placeholder="Language" name="Language" class="searchInput"/></div>
     <div class="text"><label>imdbRating: </label><input type="text" placeholder="imdbRating" name="imdbRating" class="searchInput"/></div>
     <div class="text"><label>Type: </label><input type="text" placeholder="Type" name="Type" class="searchInput"/></div>
-    <div id="parentButton"><button id="submitSearch">Search</button></div>
+    <div id="parentButton"><button id="submitSearch" class="btn btn-primary">Search</button></div>
 </div>
 
 <section id="movieList"></section>
 <div class="emptyDiv"></div>
 
 <div id="paginationButtons">
-    <button type="button" class="btn btn-light" id="prevPage">Previous Page</button>
-    <button type="button" class="btn btn-light" id="nextPage">Next Page</button>
+    <button type="button" class="btn btn-primary" id="prevPage">Previous Page</button>
+    <button type="button" class="btn btn-primary" id="nextPage">Next Page</button>
 </div>
 <div class="emptyDiv"></div>
 
