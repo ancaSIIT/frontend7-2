@@ -1,4 +1,5 @@
-#bannerZone, #bannerImg {
+#bannerZone,
+#bannerImg {
     max-height: 300px;
     width: 100%;
     width: 100%;
@@ -17,21 +18,17 @@
     margin: auto;
     width: 60%;
 }
+
 body {
-  background-image: linear-gradient(
-    to right,
-    #081C48,
-    #52A2D2,
-    #CACDCC,
-    #52A2D2,
-    #081C48
-  );
-  background-repeat: repeat;
-  background-size: cover;
+    background-image: linear-gradient( to right, #081C48, #52A2D2, #CACDCC, #52A2D2, #081C48);
+    background-repeat: repeat;
+    background-size: cover;
 }
+
 #advanceLink {
     display: block;
 }
+
 #inputContainer {
     display: none;
     width: 50%;
@@ -40,14 +37,15 @@ body {
     padding: 10px;
     background-color: white;
     margin: 0 auto 20px auto;
-  }
-  .text {
+}
+
+.text {
     margin: 0;
     padding: 0;
     display: block;
-  }
+}
 
-  #inputContainer label {
+#inputContainer label {
     margin: 0;
     padding: 0;
     display: block;
@@ -56,10 +54,10 @@ body {
     width: 10em;
     text-align: right;
     float: left;
-    color:black;
-  }
+    color: black;
+}
 
-  .searchInput  {
+.searchInput {
     color: black;
     padding: 5px;
     border-radius: 5px;
@@ -67,8 +65,9 @@ body {
     background-color: #bdcbf5;
     margin: 5px 10px;
     width: 50%;
-  }
-  button#submitSearch {
+}
+
+button#submitSearch {
     width: 100px;
     height: 35px;
     border-radius: 5px;
@@ -76,17 +75,21 @@ body {
     background-color: #4169e1;
     color: #d2cbc6;
     margin-top: 10px;
-  }
-  button#submitSearch:hover {
+}
+
+button#submitSearch:hover {
     box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
-  }
-  #parentButton {
+}
+
+#parentButton {
     text-align: center;
-  }
-  section#movieList {
+}
+
+section#movieList {
     width: 100%;
-  }
-  #movieList article {
+}
+
+#movieList article {
     width: 60%;
     display: block;
     margin: 20px auto;
@@ -97,45 +100,48 @@ body {
     color: white;
     background-color: #081C48;
     overflow: auto;
-  }
-  #movieList img {
+}
+
+#movieList img {
     max-width: 30%;
     height: auto;
     float: left;
     margin: 5px 25px 10px 0;
-  }
-  #details {
+}
+
+#details {
     float: right;
-    margin: 0 30px 10px 10px;;
-  }
-  @media (max-width: 768px) {
+    margin: 0 30px 10px 10px;
+    ;
+}
+
+@media (max-width: 768px) {
     #inputContainer {
-      margin-left: auto;
-      width: 80%;
+        margin-left: auto;
+        width: 80%;
     }
-    .searchInput  {
-      width: 60%;
+    .searchInput {
+        width: 60%;
     }
     label {
-      width: 6em;
+        width: 6em;
     }
     #movieList img {
-      max-width: 50%;
-      margin: 10px auto;
-      height: auto;
-      float: none;
+        max-width: 50%;
+        margin: 10px auto;
+        height: auto;
+        float: none;
     }
     #movieList article {
-      width: 70%;
-      height: auto;
-      text-align: center;
+        width: 70%;
+        height: auto;
+        text-align: center;
     }
     #details {
-      float: none;
+        float: none;
     }
     h6 {
-      text-align: justify;
-      margin-left: 20px;
+        text-align: justify;
+        margin-left: 20px;
     }
-  }
-
+}
