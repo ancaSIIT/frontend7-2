@@ -1,172 +1,149 @@
+#auth {
+  list-style-type: none;
+}
+#teamTitle {
+  position: absolute;
+  top:20px;
+  right: 20px;
+  color: #CACDCC;
+  text-shadow: 5px 5px 7px #52A2D2;
+  }
+  #teamTitle span {
+  font-size: 0.5em;
+  color: #CACDCC;
+  }
 body {
-    background-image: linear-gradient( to right, #081C48, #52A2D2, #CACDCC, #52A2D2, #081C48);
-    background-repeat: repeat;
-    background-size: cover;
+  background-image: linear-gradient(
+    to right,
+    #081C48,
+    #52A2D2,
+    #CACDCC,
+    #52A2D2,
+    #081C48
+  );
+  background-repeat: repeat;
+  background-size: cover;
 }
-
 #movieDetails {
-    width: 70%;
-    border: 1px solid #081C48;
-    box-shadow: 5px 5px 7px #154D78;
-    border-radius: 10px;
-    margin: 20px auto;
-    overflow: auto;
-    background-color: #CACDCC;
+  width: 70%;
+  border: 1px solid #081C48;
+  box-shadow: 5px 5px 7px #154D78;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: auto;
+  background-color: #CACDCC;
 }
-
-#EditmovieDetails {
-    width: 70%;
-    height: 100%;
-    border: 1px solid #081C48;
-    box-shadow: 5px 5px 7px #154D78;
-    border-radius: 10px;
-    margin: 20px auto;
-    overflow: auto;
-    background-color: #CACDCC;
-}
-
 #image {
-    float: right;
-    padding: 0 15px 0 15px;
+  float: right;
+  padding: 0 15px 0 15px;
 }
-
 #image #poster {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
-
-p,
-li {
-    color: royalblue;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: justify;
+p,li {
+  color:#154D78;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
 }
-
-#title,
-p#year {
-    float: left;
-    margin-bottom: 0;
-    margin-top: 10px;
-    padding-left: 10px;
-    color: royalblue;
+#title, p#year {
+  float: left;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-left: 10px;
+  color: #52A2D2;
 }
-
 .info {
-    background-color: #081C48;
-    margin-bottom: 10px;
+  background-color:  #081C48;
+  margin-bottom: 10px;
 }
-
 p#year {
-    color: silver;
-    font-size: 1.3em;
-    margin-left: 0;
-    margin-top: 15px;
+  color: silver;
+  font-size: 1.3em;
+  margin-left: 0;
+  margin-top: 15px;
 }
-
 .line {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; 
+  padding-left: 10px;  
 }
-
-p#released,
-p#genre,
-p#runtime {
-    padding: 0 10px 0 0;
-    font-size: 0, 6em;
-    color: silver;
-    margin: 0;
+p#released, p#genre, p#runtime {
+  padding: 0 10px 0 0;
+  font-size: 0,6em;
+  color: silver;
+  margin: 0;
 }
-
 p#released {
-    padding-left: 10px;
+  padding-left: 10px;
 }
-
 p#genre {
-    border-right: 2px solid #737373;
-    border-left: 2px solid #737373;
-    padding-left: 10px;
+  border-right: 2px solid  #737373;
+  border-left: 2px solid  #737373;
+  padding-left: 10px;
 }
-
 p#imdbRating {
-    margin: 25px 5px 0 5px;
-    border-right: 2px solid #737373;
-    padding: 0 10px 0 10px;
-    float: right;
-    font-size: 0, 5em;
-    color: silver;
+  margin: 25px 5px 0 5px;
+  border-right: 2px solid  #737373;
+  padding: 0 10px 0 10px;
+  float: right;
+  font-size: 0,5em;
+  color:  silver;
 }
-
 p#imdbVotes {
-    margin: 18px 5px 0 5px;
-    float: right;
-    text-align: center;
-    font-size: 0, 3em;
-    color: silver;
+  margin: 18px 5px 0 5px;
+  
+  float: right;
+  text-align: center;
+  font-size: 0,3em;
+  color:  silver;
 }
-
 label {
-    font-weight: bolder;
-    color: #4d4d4d;
+  font-weight: bolder;
+  color: #4d4d4d;
 }
-
 #ratingLabel {
-    margin-left: 20px;
+  margin-left: 20px;
 }
-
-#editMovie,
-#deleteMovie,
-#saveEditMovie,
-#close {
-    width: 100px;
-    height: 35px;
-    margin-left: 40px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #081C48;
-    background-color: #081C48;
-    color: #d2cbc6;
+#editMovie, #deleteMovie {
+  width: 100px;
+  height: 35px;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  
 }
-
-#editMovie:hover,
-#deleteMovie:hover {
-    box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
-    border: 1px solid #154D78;
-}
-
 .btns {
-    text-align: center;
+  text-align: center;
 }
 
 @media (max-width: 1240px) {
-    p#imdbVotes {
-        clear: left;
-        float: left;
-        border-left: none;
-        border-right: 2px solid #737373;
-        margin-left: 10px;
-        margin-bottom: 20px;
-        padding-left: 0;
-    }
-    p#imdbRating {
-        float: left;
-        margin-bottom: 20px;
-    }
+  p#imdbVotes  {
+    clear: left;
+    float: left;
+    border-left: none;
+    border-right: 2px solid  #737373;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-left: 0;
+  } 
+  p#imdbRating {
+    float:left;  
+    margin-bottom: 20px;   
+  }
 }
-
 @media (max-width: 768px) {
-    #movieDetails {
-        width: 100%;
-    }
-    #image {
-        float: none;
-        text-align: center;
-    }
+  #movieDetails {
+    width: 100%;
+  }
+  #image {
+    float: none;
+    text-align: center;
+  }
 }
-
-#emptyDiv {
+  #emptyDiv {
     height: 30px;
-}
+  }
