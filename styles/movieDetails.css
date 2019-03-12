@@ -136,7 +136,7 @@ label {
 }
 @media (max-width: 768px) {
   #movieDetails {
-    width: 100%;
+    width: 90%;
   }
   #image {
     float: none;
