@@ -1,10 +1,11 @@
 $(document).ready(onHtmlLoaded);
 
 function onHtmlLoaded() {
+  initState();
+  showAdd();
   var movieList = new MovieList({url:"https://ancient-caverns-16784.herokuapp.com/movies"});
   movieList.getMovies().then(function(response) {
     displayMovies(response.results);
-    showAdd();
   });
   
   $("#searchButton").on("click", function() {
@@ -184,3 +185,14 @@ function showAdd() {
     $("#addMovie").removeClass("displayNone");
   }
 };
+
+function initState() {
+  if (localStorage.getItem('accessToken') !== null) {
+    $("#logout").removeClass("displayNone");
+    $("#dropdownMenu1").addClass("displayNone");
+  } else{
+    $("#logout").addClass("displayNone");  
+    $("#dropdownMenu1").removeClass("displayNone");
+  }
+  
+}
