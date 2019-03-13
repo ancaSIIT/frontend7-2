@@ -139,6 +139,7 @@ $(document).ready(function () {
       var authModel = new Authentication({ username: username, password: password });
       authModel.login().then(function(response) {
         location.reload();
+        $("#welcome").text("Logged in as " + username);
       },
       function(response){
         $("#authError").text("Username is not registered!")
@@ -160,6 +161,7 @@ $(document).ready(function () {
       var authModel = new Authentication({ username: username, password: password });
       authModel.register().then(function(response) {
         location.reload();
+        $("#welcome").text("Logged in as " + username);
       },
       function(response){
         $("#authError").text("Username already registered!")
@@ -175,6 +177,7 @@ $(document).ready(function () {
     var authModel = new Authentication();
     authModel.logout().then(function(response) {
       location.reload();
+      $("#welcome").text("");
     });
   });
 });
