@@ -100,3 +100,7 @@ input, textarea {
     text-align: right;
   }
 }
+
+.displayNone {
+  display: none;
+}
