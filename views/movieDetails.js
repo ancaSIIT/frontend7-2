@@ -28,15 +28,11 @@ function onHtmlLoaded() {
         }
         container.querySelector("#editMovie").addEventListener("click", editMovie);
         container.querySelector("#deleteMovie").addEventListener("click", deleteMovie);
+        showBtns();
     });
 }
 
 function editMovie() {
-    if ('x-auth-token' == null) {
-        console.log("You need to sign in before editing");
-        alert("You need to sign in before editing");
-    } else {
-
 
         var id = getUrlParameter("id");
         var newcontainer = document.createElement("article");
@@ -154,7 +150,6 @@ function editMovie() {
         }
 
     }
-}
 
 function deleteMovie() {
     var id = this.parentNode.getAttribute("id");
@@ -177,3 +172,12 @@ function getUrlParameter(name) {
         "" :
         decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+function showBtns() {
+    $("#editMovie").addClass("displayNone");
+    $("#deleteMovie").addClass("displayNone");
+    if (localStorage.getItem('accessToken') !== null) {
+      $("#editMovie").removeClass("displayNone");
+      $("#deleteMovie").removeClass("displayNone");
+    }
+  };
