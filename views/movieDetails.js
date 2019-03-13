@@ -5,21 +5,21 @@ function onHtmlLoaded() {
     var container = document.getElementById("movieDetails");
     var movie = new Movie({ _id: id });
     movie.getMovie().then(function() {
-        container.innerHTML="<div class='info'><h2 id='title'>"+movie.Title+"</h2><p id='year'>("+movie.Year+")</p>"+
-        "<p id='imdbVotes'> IMDb votes: <br />"+movie.imdbVotes+"</p><p id='imdbRating' title='Rating IMDb'>"+
-        "<i class='fas fa-star' style='font-size:25px;color:yellow'></i>&nbsp;&nbsp;"+movie.imdbRating+"</p>"+
-        "<div style='clear:both'></div><div class='line'><p id='runtime'>"+movie.Runtime+"</p><p id='genre'>"+movie.Genre+"</p>"+
-        "<p id='released'>"+movie.Released+"</p></div><br /><div style='clear:both'></div></div><div id='image'>"+
-        "<img id='poster' src='"+movie.Poster+"' alt='"+movie.Title+"'/></div><p id='rated' class='datails'><label>Rated:&nbsp;</label>"+movie.Rated+"</p>"+
-        "<p id='director' class='datails'><label>Director:&nbsp;</label>"+movie.Director+"</p><p id='writer' class='datails'>"+
-        "<label>Writer:&nbsp;</label>"+movie.Writer+"</p><p id='actors' class='datails'><label>Actors:&nbsp;</label>"+movie.Actors+"</p>"+
-        "<p id='plot' class='datails'><label>Plot:&nbsp;</label>"+movie.Plot+"</p><p id='language' class='datails'><label>Language:&nbsp;"+
-        "</label>"+movie.Language+"</p><p id='country' class='datails'><label>Country:&nbsp;</label>"+movie.Country+"</p>"+
-        "<p id='awards' class='datails'><label>Movie awards:&nbsp;</label>"+movie.Awards+"</p><label id='ratingLabel'>Ratings:&nbsp;</label>"+
-        "<ul id='ratings' class='datails'></ul><p id='metascore' class='datails'><label>Metascore:&nbsp;</label>"+movie.Metascore+"</p>"+
-        "<p id='imdbID' class='datails'><label>IMDb ID:&nbsp;</label>"+movie.imdbID+"</p><p id='type' class='datails'><label>Type:&nbsp;"+
-        "</label>"+movie.Type+"</p><div class='btns' id="+movie._id+"><button id='editMovie' class='btn btn-primary'>Edit</button>"+
-        "<button id='deleteMovie' class='btn btn-primary'>Delete</button></div>";
+        container.innerHTML = "<div class='info'><h2 id='title'>" + movie.Title + "</h2><p id='year'>(" + movie.Year + ")</p>" +
+            "<p id='imdbVotes'> IMDb votes: <br />" + movie.imdbVotes + "</p><p id='imdbRating' title='Rating IMDb'>" +
+            "<i class='fas fa-star' style='font-size:25px;color:yellow'></i>&nbsp;&nbsp;" + movie.imdbRating + "</p>" +
+            "<div style='clear:both'></div><div class='line'><p id='runtime'>" + movie.Runtime + "</p><p id='genre'>" + movie.Genre + "</p>" +
+            "<p id='released'>" + movie.Released + "</p></div><br /><div style='clear:both'></div></div><div id='image'>" +
+            "<img id='poster' src='" + movie.Poster + "' alt='" + movie.Title + "'/></div><p id='rated' class='datails'><label>Rated:&nbsp;</label>" + movie.Rated + "</p>" +
+            "<p id='director' class='datails'><label>Director:&nbsp;</label>" + movie.Director + "</p><p id='writer' class='datails'>" +
+            "<label>Writer:&nbsp;</label>" + movie.Writer + "</p><p id='actors' class='datails'><label>Actors:&nbsp;</label>" + movie.Actors + "</p>" +
+            "<p id='plot' class='datails'><label>Plot:&nbsp;</label>" + movie.Plot + "</p><p id='language' class='datails'><label>Language:&nbsp;" +
+            "</label>" + movie.Language + "</p><p id='country' class='datails'><label>Country:&nbsp;</label>" + movie.Country + "</p>" +
+            "<p id='awards' class='datails'><label>Movie awards:&nbsp;</label>" + movie.Awards + "</p><label id='ratingLabel'>Ratings:&nbsp;</label>" +
+            "<ul id='ratings' class='datails'></ul><p id='metascore' class='datails'><label>Metascore:&nbsp;</label>" + movie.Metascore + "</p>" +
+            "<p id='imdbID' class='datails'><label>IMDb ID:&nbsp;</label>" + movie.imdbID + "</p><p id='type' class='datails'><label>Type:&nbsp;" +
+            "</label>" + movie.Type + "</p><div class='btns' id=" + movie._id + "><button id='editMovie' class='btn btn-primary'>Edit</button>" +
+            "<button id='deleteMovie' class='btn btn-primary'>Delete</button></div>";
         console.log(movie);
 
         var list = document.getElementById('ratings');
@@ -32,44 +32,47 @@ function onHtmlLoaded() {
 }
 
 function editMovie() {
-    if (localStorage.getItem('access Token') == null) {
+    if ('x-auth-token' == null) {
         console.log("You need to sign in before editing");
         alert("You need to sign in before editing");
     } else {
 
 
         var id = getUrlParameter("id");
-        var newcontainer = document.getElementById("EditmovieDetails");
+        var newcontainer = document.createElement("article");
+        newcontainer.setAttribute("id", "EditmovieDetails")
         var movie = new Movie({ _id: id });
         movie.getMovie().then(function() {
             newcontainer.innerHTML =
-                `<div class="title"><label id="newValues">Title: </label><input id="newtitle" type="text" value="${movie.Title}"></div><br />
-                    <div id='image'><img id='poster' src='${movie.Poster}'/></div>
-                    <div class="year"><label id="newValues">Year: </label><input id="newyear" type="text" value="${movie.Year}"></div><br />
-                    <div class="imdbvotes"><label id="newValues">IMDb votes: </label><input id="newimdbVotes" type="text" value="${movie.imdbVotes}"></div><br />
-                    <div class="imdbratings"><label id="newValues">IMDb Rating: </label><input id="newimdbRating" type="number" value="${movie.imdbRating}"></div><br />
-                    <div class="runtime"><label id="newValues">Runtime: </label><input id="newruntime" type="text" value="${movie.Runtime}"></div><br />
-                    <div class="genre"><label id="newValues">Genre: </label><input id="newgenre" type="text" value="${movie.Genre}"></div><br />
-                    <div class="released"><label id="newValues">Released: </label><input id="newreleased" type="text" value="${movie.Released}"></div><br />
-                    <div class="posterURL"><label id="newValues">PosterURL: </label><input id="newposterURL" type="text" value="${movie.Poster}"></div><br />
-                    <div class="rated"><div class=""><label id="newValues">Rated: </label><input id="newrated" type="text" value="${movie.Rated}"></div><br />
-                    <div class="director"><label id="newValues">Director: </label><input id="newdirector" type="text" value="${movie.Director}"></div><br />
-                    <div class="writer"><label id="newValues">Writer: </label><input id="newwriter" type="text" value="${movie.Writer}"></div><br />
-                    <div class="actors"><label id="newValues">Actors: </label><input id="newactors" type="text" value="${movie.Actors}"></div><br />
-                    <div class="plot"><label id="newValues">Plot: </label><textarea id="newplot">${movie.Plot}</textarea></div><br />
-                    <div class="language"><label id="newValues">Language: </label><input id="newlanguage" type="text" value="${movie.Language}"></div><br />
-                    <div class="country"><label id="newValues">Country: </label><input id="newcountry" type="text" value="${movie.Country}"></div><br />
-                    <div class="movies"><label id="newValues">Movies: </label><input id="newawards" type="text" value="${movie.Awards}"></div><br />
-                    <div class="ratings"></div><br /><label id="newValues">Ratings: </label><input id="newratings" type="text" value="${movie.Ratings[0].Value}"></div><br />
-                    <div class="metascore"><label id="newValues">Metascore: </label><input id="newmetascore" type="text" value="${movie.Metascore}"></div><br />
-                    <div class="imdbID"><label id="newValues">IMDb ID: </label><input id="newimdbID" type="text" value="${movie.imdbID}"></div><br />
-                    <div class="type"><label id="newValues">Type: </label><input id="newtype" type="text" value="${movie.Type}"></div><br />
-                    <div class="btns id="${movie._id }"><button id='saveEditMovie'>Save</button><button  id='close' " >Close</button></div>`;
+                `<div class='info'>
+                <input type='text' class='editinput' id='newtitle' value='${movie.Title}'/>
+                <input type='text' class='inputnumber' id='newyear' value='${movie.Year}'/>
+                <div id='editVotes-Rating'><label id='editLabel'> IMDb votes: </label><input type='text' class='inputnumber' id='newimdbVotes' value='${movie.imdbVotes}' </p><br/>
+                <label id='editLabel'> Rating: </label><input type='text' class='inputnumber' id='newimdbRating' value='${movie.imdbRating}'</p></div>
+                <div style='clear:both'></div>
+                <input type='text' class='inputnumber' id='newruntime' value='${movie.Runtime}'>
+                <input type='text' id='newgenre' class='editinput' value='${movie.Genre}'>
+                <input type='text' id='newreleased' class='inputnumber' value='${movie.Released}'></div></div><br />
+                    <div id='bodyedit'><label>PosterURL: </label><input id="newposterURL" class='editinput' type="text" value="${movie.Poster}"><br />
+                    <label>Rated: </label><input id="newrated" class='editinput' type="text" value="${movie.Rated}"><br />
+                    <label>Director: </label><input id="newdirector" class='editinput' type="text" value="${movie.Director}"><br />
+                    <label>Writer: </label><input id="newwriter" class='editinput' type="text" value="${movie.Writer}"><br />
+                   <label>Actors: </label><input id="newactors" class='editinput' type="text" value="${movie.Actors}"><br />
+                    <label>Plot: </label><textarea id="newplot" class='editinput'>${movie.Plot}</textarea><br />
+                   <label>Language: </label><input id="newlanguage" class='editinput' type="text" value="${movie.Language}"><br />
+                    <label>Country: </label><input id="newcountry" class='editinput' type="text" value="${movie.Country}"><br />
+                    <label>Movies: </label><input id="newawards" class='editinput' type="text" value="${movie.Awards}"><br />
+                    <label>Ratings: </label><input id="newratings" class='editinput' type="text" value="${movie.Ratings[0].Value}"><br />
+                    <label>Metascore: </label><input id="newmetascore" class='editinput' type="text" value="${movie.Metascore}"><br />
+                    <label>IMDb ID: </label><input id="newimdbID" class='editinput' type="text" value="${movie.imdbID}"><br />
+                    <label>Type: </label><input id="newtype" class='editinput' type="text" value="${movie.Type}"></div><br />
+                    <div class="btns id="${movie._id }"><button id='saveEditMovie' class='btn btn-primary'>Save</button><button  id='close' class='btn btn-primary' >Close</button></div>`;
 
 
 
             newcontainer.querySelector("#saveEditMovie").addEventListener("click", saveMovie);
             newcontainer.querySelector("#close").addEventListener("click", closeEdit);
+            document.getElementById("Details").appendChild(newcontainer);
 
             $("#movieDetails").slideToggle().toggleClass("active");
 
@@ -160,9 +163,10 @@ function deleteMovie() {
         movie.deleteMovie().then(function() {
             movie.deleteMovie().then(function() {
                 alert("The entry has been deleted");
+                window.open("home.html?id=", "_self");
             });
         });
-    }       
+    }
 };
 
 function getUrlParameter(name) {
