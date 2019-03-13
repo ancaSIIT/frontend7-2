@@ -8,9 +8,6 @@ function onHtmlLoaded() {
    
     $("#save").on("click", function() {
 
-        if (localStorage.getItem('access Token') == null) {
-            alert("You need to sign in before adding a new entry");
-        } else {
             var title = document.getElementById("title").value;
             var year = document.getElementById("year").value;
             var imdbVotes = document.getElementById("imdbVotes").value;
@@ -62,8 +59,7 @@ function onHtmlLoaded() {
                 },      
             function(response) {
                 alert("An error has occurred");
-            });
-        }      
+            });     
     }); 
 };
 
