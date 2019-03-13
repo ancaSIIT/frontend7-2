@@ -135,11 +135,17 @@ $(document).ready(function () {
       $('input[type="text"],input[type="password"]').css("box-shadow", "0 0 3px red");
       alert("Please fill all fields!");
     } else {
-      var authModel = new Authentication({username: username, password: password});
-      authModel.login()
+      var authModel = new Authentication({ username: username, password: password });
+      authModel.login().then(function(response) {
+        location.reload();
+      },
+      function(response){
+        $("#authError").text("Username is not registered!")
+      });
     }
   });
 });
+
 
 // REGISTER FUNCTION
 $(document).ready(function () {
@@ -149,36 +155,28 @@ $(document).ready(function () {
     var password = $("#passwordInput").val();
     if (username == '' || password == '') {
       alert("Please fill all fields!");
-    } else if ((password.length) < 8) {
-      alert("Password should atleast 8 character in length!");
     } else {
-      var authModel = new Authentication({username: username, password: password});
-      authModel.register()
+      var authModel = new Authentication({ username: username, password: password });
+      authModel.register().then(function(response) {
+        location.reload();
+      },
+      function(response){
+        $("#authError").text("Username already registered!")
+      });
     }
   });
 });
 
 // LOGOUT FUNCTION
 $(document).ready(function () {
-  $("#logout").click(function () {
+  $("#logout").click(function (event) {
     event.preventDefault();
     var authModel = new Authentication();
-    authModel.logout()
+    authModel.logout().then(function(response) {
+      location.reload();
+    });
   });
 });
-
-// DISABLE AUTH BUTTONS
-function disable_enable(_this) {
-  if (_this == 'login') {
-    document.getElementById("login").hidden = true;
-    document.getElementById("logout").hidden = false;
-    document.getElementById("register").hidden = true;
-  } else {
-    document.getElementById("login").hidden = false;
-    document.getElementById("logout").hidden = true;
-    document.getElementById("register").hidden = false;
-  }
-}
 
 function showAdd() {
   $("#addMovie").addClass("displayNone");
