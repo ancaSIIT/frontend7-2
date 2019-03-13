@@ -53,10 +53,11 @@
                             <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block">Log In</button>
-                            <button type="submit" class="btn btn-primary btn-block">Log Out</button>
-                            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-                        </div>
+                          <input type="button" id="login" value="Login" class="btn btn-primary btn-block" onclick="disable_enable('login');">
+                          <input type="button" id="logout" value="Logout" class="btn btn-primary btn-block" onclick="disable_enable('logout');">
+                          <input type="button" id="register" value="Register" class="btn btn-primary btn-block" onclick="disable_enable('register');">
+                      </div>
+                      <div id="authError"></div>
                     </form>
                 </li>
             </ul>
