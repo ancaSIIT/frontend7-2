@@ -90,10 +90,6 @@ button#submitSearch {
     text-align: center;
 }
 
-button#submitSearch:hover {
-    box-shadow: -5px 5px 4px #154D78 inset, 5px -5px 4px #154D78 inset;
-}
-
 section#movieList {
     width: 100%;
 }

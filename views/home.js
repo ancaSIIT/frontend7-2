@@ -67,7 +67,7 @@ function onHtmlLoaded() {
 
 function displayMovies(movies) {
   if (movies.length==0) {
-    $("#movieList").append(`<p style="color:white; margin-left:20px; font-size:1em">Your search did not match any movie. Please try another keyword</p>`);
+    $("#movieList").append(`<p style="color:white; margin-left:20px; font-size:1em">Your search did not match any movie.</p>`);
   }
     for (var i = 0; i < movies.length; i++) {
         var id = movies[i]._id;
@@ -99,7 +99,7 @@ function displayMovies(movies) {
         );
         $("#movieList").on("click", "#details", function() {
           var id = $(this).parent().attr("id");
-          window.open("movieDetails.html?id="+id, "_blank");
+          window.open("movieDetails.html?id="+id, "_self");
         })
       }
     };
