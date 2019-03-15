@@ -53,10 +53,10 @@ body {
 #inputContainer {
     display: none;
     width: 50%;
-    border: 2px solid white;
+    border: 2px solid #081C48;
     border-radius: 5px;
-    padding: 10px;
-    background-color: white;
+    padding: 20px;
+    background-color: #081C48;
     margin: 0 auto 20px auto;
 }
 
@@ -106,15 +106,19 @@ body {
     width: 10em;
     text-align: right;
     float: left;
-    color: black;
+    color: white;
+}
+
+#searchInput {
+    margin-right: 0;
 }
 
 .searchInput {
     color: black;
     padding: 5px;
     border-radius: 5px;
-    border: #aad6ee;
-    background-color: #aad6ee;
+    border: white;
+    background-color: white;
     margin: 5px 10px;
     width: 50%;
 }
@@ -158,6 +162,9 @@ section#movieList {
     margin: 0 30px 10px 10px;
 }
 
+.displayNone {
+    display: none;
+  }
 @media (max-width: 768px) {
     #inputContainer {
         margin-left: auto;

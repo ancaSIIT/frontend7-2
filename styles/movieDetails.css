@@ -1,7 +1,21 @@
-#auth {
-    list-style-type: none;
+#bannerZone,
+#bannerImg {
+    max-height: 300px;
+    width: 100%;
+    position: relative;
 }
 
+.emptyDiv {
+    height: 50px;
+}
+#auth {
+    list-style-type: none;
+    display: none;
+}
+#userName {
+    color: white;
+    margin-top: 10px;
+}
 #teamTitle {
     position: absolute;
     top: 20px;

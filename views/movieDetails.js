@@ -179,5 +179,7 @@ function showBtns() {
     if (localStorage.getItem('accessToken') !== null) {
       $("#editMovie").removeClass("displayNone");
       $("#deleteMovie").removeClass("displayNone");
+      var name=document.getElementById("userName");
+      name.innerHTML="User logged in";
     }
   };
