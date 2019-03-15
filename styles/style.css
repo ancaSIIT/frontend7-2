@@ -60,16 +60,31 @@ body {
     margin: 0 auto 20px auto;
 }
 
-#bodyedit label {
-    margin: 0;
-    padding: 0;
-    display: block;
-    padding-top: 0.4em;
-    padding-right: 0.25em;
-    width: 10em;
-    text-align: right;
-    float: left;
+#newtitle {
     color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: inset;
+    background-color: #C8C8CD;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.newtitle {
+    display: flex;
+    justify-content: center;
+}
+
+#editpart1 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+#editpart2 {
+    display: flex;
+    flex-direction: column;
+    float: right;
 }
 
 .editinput {
@@ -78,18 +93,8 @@ body {
     border-radius: 5px;
     border: inset;
     background-color: #C8C8CD;
-    margin: 5px 10px;
-    width: 23%;
-}
-
-.inputnumber {
-    color: black;
-    padding: 5px;
-    border-radius: 5px;
-    border: inset;
-    background-color: #C8C8CD;
-    margin: 5px;
-    width: 70px;
+    margin: 10px 10px;
+    width: 40%;
 }
 
 .text {
@@ -98,7 +103,9 @@ body {
     display: block;
 }
 
-#inputContainer label {
+#inputContainer label,
+#editpart1 label,
+#editpart2 label {
     margin: 0;
     padding: 0;
     padding-top: 0.4em;
