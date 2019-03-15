@@ -41,6 +41,55 @@ body {
     background-color: #CACDCC;
 }
 
+#newtitle {
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: inset;
+    background-color: #C8C8CD;
+    margin: 10px 10px;
+    text-align: center;
+}
+
+.newtitle {
+    display: flex;
+    justify-content: center;
+}
+
+#editpart1 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+#editpart2 {
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+
+.editinput {
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: inset;
+    background-color: #C8C8CD;
+    margin: 10px 10px;
+    width: 40%;
+}
+
+#editpart1 label,
+#editpart2 label {
+    margin: 0;
+    padding: 0;
+    padding-top: 0.4em;
+    padding-right: 0.25em;
+    width: 10em;
+    text-align: right;
+    float: left;
+    color: black;
+}
+
 #editVotes-Rating {
     float: right;
 }
@@ -190,5 +239,4 @@ label {
 
 .displayNone {
     display: none;
-  }
-  
+}
