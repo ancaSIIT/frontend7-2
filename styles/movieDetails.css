@@ -59,9 +59,9 @@ body {
     color: black;
     padding: 5px;
     border-radius: 5px;
-    border: inset;
-    background-color: #C8C8CD;
-    margin: 10px 10px;
+    border: #aad6ee;
+    background-color: white;
+    margin: 30px 10px;
     text-align: center;
 }
 
@@ -74,22 +74,24 @@ body {
     display: flex;
     flex-direction: column;
     float: left;
+    margin-bottom: 10px;
 }
 
 #editpart2 {
     display: flex;
     flex-direction: column;
-    float: right;
+    float: left;
+    margin-bottom: 10px;
 }
 
 .editinput {
     color: black;
     padding: 5px;
     border-radius: 5px;
-    border: inset;
-    background-color: #C8C8CD;
-    margin: 10px 10px;
-    width: 40%;
+    border: #aad6ee;
+    background-color: white;
+    margin: 5px 10px;
+    width: 50%;
 }
 
 #editpart1 label,
@@ -101,7 +103,8 @@ body {
     width: 10em;
     text-align: right;
     float: left;
-    color: black;
+    font-weight: bolder;
+    color: #4d4d4d;
 }
 
 #editVotes-Rating {
@@ -210,7 +213,7 @@ label {
 #saveEditMovie,
 #close {
     width: 100px;
-    height: 35px;
+    height: 38px;
     margin-left: 40px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -235,6 +238,12 @@ label {
         float: left;
         margin-bottom: 20px;
     }
+    #editpart1, #editpart2 {
+        width: 90%;
+    }
+    .editinput {
+        width: 65%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -244,6 +253,21 @@ label {
     #image {
         float: none;
         text-align: center;
+    }
+    .text {
+        text-align: center;
+    }
+    #editpart1, #editpart2 {
+        width: 90%;
+        margin: 5px;
+        padding: 5px;
+    }
+    .editinput {
+        width: 70%;
+    }
+    #editpart1 label, #editpart2 label {
+        width: 6em;
+        text-align: right;
     }
 }
 

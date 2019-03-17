@@ -93,7 +93,7 @@ body {
 
 button#submitSearch {
     width: 100px;
-    height: 35px;
+    height: 38px;
     margin-top: 10px;
 }
 
@@ -126,13 +126,14 @@ section#movieList {
 }
 
 #details {
+    width: 100px;
     float: right;
     margin: 0 30px 10px 10px;
 }
 
 .displayNone {
     display: none;
-  }
+}
 @media (max-width: 768px) {
     #inputContainer {
         margin-left: auto;

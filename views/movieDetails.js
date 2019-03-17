@@ -64,7 +64,7 @@ function editMovie() {
             <div class='text'> <label>Type: </label><input id="newtype" class='editinput' type="text" value="${movie.Type}"></div></div>
             <div style='clear:both'></div>  
             
-            <div class="btns id="${movie._id }"><button id='saveEditMovie' class='btn btn-primary'>Save</button><button  id='close' class='btn btn-primary' >Close</button></div>`;
+            <div class="btns" id="${movie._id }"><button id='saveEditMovie' class='btn btn-primary'>Save</button><button  id='close' class='btn btn-primary' >Close</button></div>`;
 
 
 
