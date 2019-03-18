@@ -35,7 +35,7 @@ body {
 }
 
 #movieDetails {
-    width: 70%;
+    width: 75%;
     border: 1px solid #081C48;
     box-shadow: 5px 5px 7px #154D78;
     border-radius: 10px;
@@ -45,7 +45,7 @@ body {
 }
 
 #EditmovieDetails {
-    width: 70%;
+    width: 75%;
     border: 1px solid #081C48;
     box-shadow: 5px 5px 7px #154D78;
     border-radius: 10px;
