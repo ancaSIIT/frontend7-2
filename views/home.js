@@ -125,7 +125,7 @@ $("#prevPage").on("click", function() {
 });
 
 // LOGIN FUNCTION
-$(document).ready(function () {
+
   $("#login").click(function () {
     event.preventDefault();
     var username = $("#usernameInput").val();
@@ -139,14 +139,14 @@ $(document).ready(function () {
       var authModel = new Authentication({ username: username, password: password });
       authModel.login().then(function(response) {
         location.reload();
-        $("#welcome").text("Logged in as " + username);
+          $("#welcome").html("Logged in as " + username);
+        
       },
       function(response){
         $("#authError").text("Username is not registered!")
       });
     }
   });
-});
 
 
 // REGISTER FUNCTION

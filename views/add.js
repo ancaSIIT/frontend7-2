@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", onHtmlLoaded);
 
 function onHtmlLoaded() {
-    var name=document.getElementById("userName");
-    name.innerHTML="User logged in";
     $("#close").on("click", function() {
         window.open("home.html", "_self");
     });

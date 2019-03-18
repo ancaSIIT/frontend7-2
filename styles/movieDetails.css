@@ -10,7 +10,6 @@
 }
 #auth {
     list-style-type: none;
-    display: none;
 }
 #userName {
     color: white;
@@ -229,7 +228,6 @@ label {
         clear: left;
         float: left;
         border-left: none;
-        border-right: 2px solid #737373;
         margin-left: 10px;
         margin-bottom: 20px;
         padding-left: 0;
@@ -237,6 +235,7 @@ label {
     p#imdbRating {
         float: left;
         margin-bottom: 20px;
+        border-left: 2px solid #737373;
     }
     #editpart1, #editpart2 {
         width: 90%;
