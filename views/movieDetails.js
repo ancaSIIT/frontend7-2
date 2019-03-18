@@ -7,7 +7,7 @@ function onHtmlLoaded() {
     movie.getMovie().then(function() {
         container.innerHTML = "<div class='info'><h2 id='title'>" + movie.Title + "</h2><p id='year'>(" + movie.Year + ")</p>" +
             "<p id='imdbVotes'> IMDb votes: <br />" + movie.imdbVotes + "</p><p id='imdbRating' title='Rating IMDb'>" +
-            "<i class='fas fa-star' style='font-size:25px;color:yellow'></i>&nbsp;&nbsp;" + movie.imdbRating + "</p>" +
+            "<span style='font-size:200%;color:yellow;'>&starf;</span>&nbsp;&nbsp;" + movie.imdbRating + "</p>" +
             "<div style='clear:both'></div><div class='line'><p id='runtime'>" + movie.Runtime + "</p><p id='genre'>" + movie.Genre + "</p>" +
             "<p id='released'>" + movie.Released + "</p></div><br /><div style='clear:both'></div></div><div id='image'>" +
             "<img id='poster' src='" + movie.Poster + "' alt='" + movie.Title + "'/></div><p id='rated' class='datails'><label>Rated:&nbsp;</label>" + movie.Rated + "</p>" +
