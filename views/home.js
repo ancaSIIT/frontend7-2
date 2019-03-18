@@ -139,13 +139,12 @@ $("#prevPage").on("click", function() {
       var authModel = new Authentication({ username: username, password: password });
       authModel.login().then(function(response) {
         location.reload();
-          $("#welcome").html("Logged in as " + username);
-        
+        localStorage.setItem("user", username);
       },
       function(response){
         $("#authError").text("Username is not registered!")
       });
-    }
+    } 
   });
 
 
@@ -161,7 +160,7 @@ $(document).ready(function () {
       var authModel = new Authentication({ username: username, password: password });
       authModel.register().then(function(response) {
         location.reload();
-        $("#welcome").text("Logged in as " + username);
+        localStorage.setItem("user", username);
       },
       function(response){
         $("#authError").text("Username already registered!")
@@ -193,6 +192,9 @@ function initState() {
   if (localStorage.getItem('accessToken') !== null) {
     $("#logout").removeClass("displayNone");
     $("#dropdownMenu1").addClass("displayNone");
+    var num=localStorage.getItem("user");
+    console.log(num);
+    $("#welcome").html("Logged in as " + num);
   } else{
     $("#logout").addClass("displayNone");  
     $("#dropdownMenu1").removeClass("displayNone");

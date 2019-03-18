@@ -134,6 +134,9 @@ section#movieList {
 .displayNone {
     display: none;
 }
+#searchInput {
+    max-width: 85%;
+}
 @media (max-width: 768px) {
     #inputContainer {
         margin-left: auto;
