@@ -29,6 +29,7 @@ function onHtmlLoaded() {
         container.querySelector("#editMovie").addEventListener("click", editMovie);
         container.querySelector("#deleteMovie").addEventListener("click", deleteMovie);
         showBtns();
+        initState();
     });
 }
 
@@ -183,3 +184,70 @@ function showBtns() {
       $("#deleteMovie").removeClass("displayNone");
     }
 };
+
+// LOGIN FUNCTION
+
+$("#login").click(function () {
+    event.preventDefault();
+    var username = $("#usernameInput").val();
+    var password = $("#passwordInput").val();
+    // Checking for blank fields.
+    if (username == '' || password == '') {
+      $('input[type="text"],input[type="password"]').css("border", "2px solid red");
+      $('input[type="text"],input[type="password"]').css("box-shadow", "0 0 3px red");
+      alert("Please fill all fields!");
+    } else {
+      var authModel = new Authentication({ username: username, password: password });
+      authModel.login().then(function (response) {
+        location.reload();
+        localStorage.setItem("user", username);
+      },
+        function (response) {
+          $("#authError").text("Username is not registered!")
+        });
+    }
+  });
+  
+  
+  // REGISTER FUNCTION
+  $("#register").click(function (event) {
+    event.preventDefault();
+    var username = $("#usernameInput").val();
+    var password = $("#passwordInput").val();
+    if (username == '' || password == '') {
+      alert("Please fill all fields!");
+    } else {
+      var authModel = new Authentication({ username: username, password: password });
+      authModel.register().then(function (response) {
+        location.reload();
+        localStorage.setItem("user", username);
+      },
+        function (response) {
+          $("#authError").text("Username already registered!")
+        });
+    }
+  });
+  
+  
+  // LOGOUT FUNCTION
+  $("#logout").click(function (event) {
+    event.preventDefault();
+    var authModel = new Authentication();
+    authModel.logout().then(function (response) {
+      location.reload();
+      $("#welcome").text("");
+    });
+  });
+
+  function initState() {
+    if (localStorage.getItem('accessToken') !== null) {
+      $("#logout").removeClass("displayNone");
+      $("#dropdownMenu1").addClass("displayNone");
+      var num = localStorage.getItem("user");
+      console.log(num);
+      $("#welcome").html("Logged in as " + num);
+    } else {
+      $("#logout").addClass("displayNone");
+      $("#dropdownMenu1").removeClass("displayNone");
+    }
+  }

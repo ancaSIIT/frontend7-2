@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", onHtmlLoaded);
 
 function onHtmlLoaded() {
+    initState();
     $("#close").on("click", function() {
         window.open("home.html", "_self");
     });
@@ -62,5 +63,25 @@ function onHtmlLoaded() {
     }); 
 };
 
+  // LOGOUT FUNCTION
+  $("#logout").click(function (event) {
+    event.preventDefault();
+    var authModel = new Authentication();
+    authModel.logout().then(function (response) {
+        window.open("home.html?id=", "_self");
+    });
+  });
 
+  function initState() {
+    if (localStorage.getItem('accessToken') !== null) {
+      $("#logout").removeClass("displayNone");
+      $("#dropdownMenu1").addClass("displayNone");
+      var num = localStorage.getItem("user");
+      console.log(num);
+      $("#welcome").html("Logged in as " + num);
+    } else {
+      $("#logout").addClass("displayNone");
+      $("#dropdownMenu1").removeClass("displayNone");
+    }
+  }
 
