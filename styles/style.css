@@ -182,3 +182,7 @@ footer {
 a:hover {
     color: white;
 }
+
+#logout {
+    max-width: 100px;
+}

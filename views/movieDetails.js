@@ -159,11 +159,8 @@ function deleteMovie() {
     var movie = new Movie({ _id: id });
     if (confirm("Are you sure you want to delete ?")) {
         movie.deleteMovie().then(function() {
-            movie.deleteMovie().then(function() {
-                alert("The entry has been deleted");
                 window.open("home.html?id=", "_self");
             });
-        });
     }
 };
 
