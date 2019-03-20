@@ -11,6 +11,11 @@
 #auth {
     list-style-type: none;
 }
+
+#authError {
+    color: red;
+}
+
 #userName {
     color: white;
     margin-top: 10px;

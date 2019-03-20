@@ -197,5 +197,4 @@ function initState() {
     $("#logout").addClass("displayNone");
     $("#dropdownMenu1").removeClass("displayNone");
   }
-
 }
