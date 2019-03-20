@@ -53,43 +53,11 @@ body {
 #inputContainer {
     display: none;
     width: 50%;
-    border: 2px solid white;
+    border: 2px solid #081C48;
     border-radius: 5px;
-    padding: 10px;
-    background-color: white;
+    padding: 20px;
+    background-color: #081C48;
     margin: 0 auto 20px auto;
-}
-
-#bodyedit label {
-    margin: 0;
-    padding: 0;
-    display: block;
-    padding-top: 0.4em;
-    padding-right: 0.25em;
-    width: 10em;
-    text-align: right;
-    float: left;
-    color: black;
-}
-
-.editinput {
-    color: black;
-    padding: 5px;
-    border-radius: 5px;
-    border: inset;
-    background-color: #C8C8CD;
-    margin: 5px 10px;
-    width: 23%;
-}
-
-.inputnumber {
-    color: black;
-    padding: 5px;
-    border-radius: 5px;
-    border: inset;
-    background-color: #C8C8CD;
-    margin: 5px;
-    width: 70px;
 }
 
 .text {
@@ -106,22 +74,26 @@ body {
     width: 10em;
     text-align: right;
     float: left;
-    color: black;
+    color: white;
+}
+
+#searchInput {
+    margin-right: 0;
 }
 
 .searchInput {
     color: black;
     padding: 5px;
     border-radius: 5px;
-    border: #aad6ee;
-    background-color: #aad6ee;
+    border: white;
+    background-color: white;
     margin: 5px 10px;
     width: 50%;
 }
 
 button#submitSearch {
     width: 100px;
-    height: 35px;
+    height: 38px;
     margin-top: 10px;
 }
 
@@ -154,11 +126,17 @@ section#movieList {
 }
 
 #details {
+    width: 100px;
     float: right;
     margin: 0 30px 10px 10px;
-    ;
 }
 
+.displayNone {
+    display: none;
+}
+#searchInput {
+    max-width: 85%;
+}
 @media (max-width: 768px) {
     #inputContainer {
         margin-left: auto;
@@ -192,4 +170,15 @@ section#movieList {
         text-align: justify;
         margin-left: 20px;
     }
+}
+
+footer {
+    height: 100px;
+    background-color: #091C47;
+    color: white;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
 }

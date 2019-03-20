@@ -20,8 +20,12 @@
   width: 60%;
 }
 
-#auth {
+#authAdd {
   list-style-type: none;
+}
+#userName {
+  color: white;
+  margin-top: 10px;
 }
 #teamTitle {
   position: absolute;
@@ -41,12 +45,12 @@ body {
 }
 #inputData {
   width: 70%;
-  border: 1px solid white;
+  border: 1px solid #154D78;
   box-shadow: 5px 5px 7px #154D78;
   border-radius: 10px;
   margin: 40px auto;
   overflow: auto;
-  background-color: white;
+  background-color: #CACDCC;
   padding: 40px 10px;
 }
 .textDiv {
@@ -62,14 +66,15 @@ label {
   width: 12em;
   text-align: right;
   float: left;
-  color: black;
+  font-weight: bolder;
+  color: #4d4d4d;
 }
 input, textarea {
   color: black;
   padding: 5px;
   border-radius: 5px;
   border: #aad6ee;
-  background-color: #aad6ee;
+  background-color: white;
   margin: 5px 10px;
   width: 60%;
 }
@@ -78,7 +83,7 @@ input, textarea {
 }
 #save, #close {
   width: 100px;
-  height: 35px;
+  height: 38px;
   margin-left: 40px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -103,4 +108,15 @@ input, textarea {
 
 .displayNone {
   display: none;
+}
+
+footer {
+  height: 100px;
+  background-color: #091C47;
+  color: white;
+  text-align: center;
+}
+
+a:hover {
+  color: white;
 }

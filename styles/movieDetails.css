@@ -1,7 +1,20 @@
+#bannerZone,
+#bannerImg {
+    max-height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.emptyDiv {
+    height: 50px;
+}
 #auth {
     list-style-type: none;
 }
-
+#userName {
+    color: white;
+    margin-top: 10px;
+}
 #teamTitle {
     position: absolute;
     top: 20px;
@@ -22,7 +35,7 @@ body {
 }
 
 #movieDetails {
-    width: 70%;
+    width: 75%;
     border: 1px solid #081C48;
     box-shadow: 5px 5px 7px #154D78;
     border-radius: 10px;
@@ -32,13 +45,65 @@ body {
 }
 
 #EditmovieDetails {
-    width: 70%;
+    width: 75%;
     border: 1px solid #081C48;
     box-shadow: 5px 5px 7px #154D78;
     border-radius: 10px;
     margin: 20px auto;
     overflow: auto;
     background-color: #CACDCC;
+}
+
+#newtitle {
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: #aad6ee;
+    background-color: white;
+    margin: 30px 10px;
+    text-align: center;
+}
+
+.newtitle {
+    display: flex;
+    justify-content: center;
+}
+
+#editpart1 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#editpart2 {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.editinput {
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    border: #aad6ee;
+    background-color: white;
+    margin: 5px 10px;
+    width: 50%;
+}
+
+#editpart1 label,
+#editpart2 label {
+    margin: 0;
+    padding: 0;
+    padding-top: 0.4em;
+    padding-right: 0.25em;
+    width: 10em;
+    text-align: right;
+    float: left;
+    font-weight: bolder;
+    color: #4d4d4d;
 }
 
 #editVotes-Rating {
@@ -117,7 +182,7 @@ p#genre {
 }
 
 p#imdbRating {
-    margin: 25px 5px 0 5px;
+    margin: 15px 5px 0 5px;
     border-right: 2px solid #737373;
     padding: 0 10px 0 10px;
     float: right;
@@ -147,7 +212,7 @@ label {
 #saveEditMovie,
 #close {
     width: 100px;
-    height: 35px;
+    height: 38px;
     margin-left: 40px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -163,7 +228,6 @@ label {
         clear: left;
         float: left;
         border-left: none;
-        border-right: 2px solid #737373;
         margin-left: 10px;
         margin-bottom: 20px;
         padding-left: 0;
@@ -171,6 +235,13 @@ label {
     p#imdbRating {
         float: left;
         margin-bottom: 20px;
+        border-left: 2px solid #737373;
+    }
+    #editpart1, #editpart2 {
+        width: 90%;
+    }
+    .editinput {
+        width: 65%;
     }
 }
 
@@ -182,6 +253,21 @@ label {
         float: none;
         text-align: center;
     }
+    .text {
+        text-align: center;
+    }
+    #editpart1, #editpart2 {
+        width: 90%;
+        margin: 5px;
+        padding: 5px;
+    }
+    .editinput {
+        width: 70%;
+    }
+    #editpart1 label, #editpart2 label {
+        width: 6em;
+        text-align: right;
+    }
 }
 
 #emptyDiv {
@@ -190,5 +276,20 @@ label {
 
 .displayNone {
     display: none;
-  }
-  
+}
+
+footer {
+    height: 100px;
+    background-color: #091C47;
+    color: white;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+}
+
+#footerMsg {
+    color: white;
+    text-align: center;
+}
