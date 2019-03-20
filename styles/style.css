@@ -27,6 +27,10 @@
     list-style-type: none;
 }
 
+#authError {
+    color: red;
+}
+
 #teamTitle {
     position: absolute;
     top: 20px;
