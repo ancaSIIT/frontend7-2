@@ -175,3 +175,18 @@ section#movieList {
         margin-left: 20px;
     }
 }
+
+footer {
+    height: 100px;
+    background-color: #091C47;
+    color: white;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+}
+
+#logout {
+    max-width: 100px;
+}

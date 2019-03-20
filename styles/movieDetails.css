@@ -277,3 +277,19 @@ label {
 .displayNone {
     display: none;
 }
+
+footer {
+    height: 100px;
+    background-color: #091C47;
+    color: white;
+    text-align: center;
+}
+
+a:hover {
+    color: white;
+}
+
+#footerMsg {
+    color: white;
+    text-align: center;
+}
